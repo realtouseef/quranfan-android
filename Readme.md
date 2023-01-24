@@ -8,8 +8,12 @@ For now, it has 2 screens: the Emotion based Verses and Daily Verses
 
 ## Emotion Based Verses Screen
 
-![Emotion Based Verses](app/assets/emotion.png)
+<div align="center">
+  <img src="app/assets/emotion.png" height="350" title="Emotion Based Verses" />
+</div>
 
 ## Daily Verses Screen
 
-![Daily Verses](app/assets/daily_verses.png)
+<div align="center">
+  <img src="app/assets/daily_verses.png" height="350" title="Daily Verses" />
+</div>
