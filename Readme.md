@@ -6,14 +6,8 @@ The ios version of [quranfan](https://quranfan.vercel.app), built using react-na
 
 For now, it has 2 screens: the Emotion based Verses and Daily Verses
 
-## Emotion Based Verses Screen
+<div style="display: flex; justify-content: space-between;">
+  <img src="app/assets/emotion.png" height="600" title="Emotion Based Verses" />
 
-<div align="center">
-  <img src="app/assets/emotion.png" height="450" title="Emotion Based Verses" />
-</div>
-
-## Daily Verses Screen
-
-<div align="center">
-  <img src="app/assets/daily_verses.png" height="450" title="Daily Verses" />
+  <img src="app/assets/daily_verses.png" height="600" title="Daily Verses" />
 </div>
