@@ -6,10 +6,10 @@ import { EmotionDuaCard } from '../components/EmotionDuaCard';
 import SelectDropdown from 'react-native-select-dropdown';
 
 const EmotionVersesScreen = () => {
-  const [selectedValue, setSelectedValue] = useState(0);
+  const [value, setValue] = useState(null);
   return (
     <View style={{ flex: 1 }}>
-      <ScrollView style={{ height: '100%' }}>
+      <ScrollView>
         <View style={tw`bg-pink-200 rounded-lg mx-auto mt-4 h-52 w-11/12 p-4`}>
           <Text style={tw`text-xl font-semibold	`}>
             Ease your life with the quranic verses
@@ -20,28 +20,25 @@ const EmotionVersesScreen = () => {
           </Text>
           <SelectDropdown
             data={EmotionDropdownOptions}
-            buttonStyle={tw`w-full bg-pink-300 mt-4 rounded-sm`}
-            buttonTextStyle={tw`text-left`}
-            defaultButtonText='Select an Emotion'
-            dropdownStyle={tw`bg-pink-300 rounded-b-md`}
-            rowTextStyle={tw`text-left pl-2`}
-            selectedRowStyle={tw`bg-pink-400`}
             onSelect={(selectedItem) => {
-              setSelectedValue(selectedItem);
+              setValue(selectedItem);
             }}
             buttonTextAfterSelection={(selectedItem) => {
-              // text represented after item is selected
-              // if data array is an array of objects then return selectedItem.property to render after item is selected
               return selectedItem.title;
             }}
             rowTextForSelection={(item) => {
-              // text represented for each item in dropdown
-              // if data array is an array of objects then return item.property to represent item in dropdown
               return item.title;
             }}
+            buttonStyle={tw`w-full bg-pink-100 rounded-md mt-3`}
+            defaultButtonText='Select an Emotion'
+            dropdownStyle={tw`rounded-b-md bg-pink-200`}
+            rowTextStyle={tw`text-left pl-2 text-gray-800`}
+            selectedRowStyle={tw`bg-pink-300`}
+            rowStyle={tw`border-pink-300`}
+            statusBarTranslucent={true}
           />
         </View>
-        <EmotionDuaCard value={selectedValue?.id} />
+        <EmotionDuaCard value={value?.id} />
       </ScrollView>
     </View>
   );

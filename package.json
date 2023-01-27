@@ -1,6 +1,6 @@
 {
   "name": "quranfan",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ease your life with the quranic verses",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
