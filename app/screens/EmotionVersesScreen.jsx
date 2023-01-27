@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import tw from 'tailwind-react-native-classnames';
+import tw from 'twrnc';
 import { EmotionDropdownOptions } from '../lib/EmotionDropdownValues';
 import { EmotionDuaCard } from '../components/EmotionDuaCard';
 import SelectDropdown from 'react-native-select-dropdown';

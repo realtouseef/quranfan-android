@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { EmotionVerses } from '../lib/EmotionVerses';
-import tw from 'tailwind-react-native-classnames';
+import tw from 'twrnc';
 
 export function EmotionDuaCard({ value }) {
   const findingEmotion = EmotionVerses.find((emotion) => emotion.id == value);

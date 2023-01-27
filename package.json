@@ -1,6 +1,6 @@
 {
   "name": "quranfan",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ease your life with the quranic verses",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -10,6 +10,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.8",
     "expo": "~47.0.8",
@@ -21,7 +22,7 @@
     "react-native-screens": "~3.18.0",
     "react-native-select-dropdown": "^3.2.1",
     "react-native-web": "~0.18.9",
-    "tailwind-react-native-classnames": "^1.5.1"
+    "twrnc": "^3.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
