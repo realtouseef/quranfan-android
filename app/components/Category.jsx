@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import tw from 'twrnc';
+import { View, Text, Pressable } from 'react-native';
+import tw from '../lib/tailwind';
 
 const CATEGORY_OPTIONS = [
   { key: 'graveSins', title: 'Grave Sins' },
@@ -8,31 +8,30 @@ const CATEGORY_OPTIONS = [
   { key: 'adviceFromQuran', title: `100 Pieces of Advice from Qur'an` },
 ];
 
-export default function Category() {
+export default function Category({ goToAnotherScreen }) {
   return (
     <View style={tw`pl-2 mt-10`}>
-      <Text style={tw`font-semibold text-lg mb-4`}>Category</Text>
+      <Text style={tw`font-bold text-xl mb-4 text-quran-primary`}>
+        Category
+      </Text>
 
       <View style={tw`flex-row flex-wrap`}>
         {CATEGORY_OPTIONS.map(({ key, title }) => (
-          <View
+          <Pressable
             key={key}
-            style={tw`mx-auto ${
-              key === 'adviceFromQuran'
-                ? 'w-full bg-purple-500'
-                : 'w-38 bg-purple-100'
-            }   h-32 mb-4 rounded-2xl p-2`}
+            style={tw`mx-auto bg-quran-secondary ${
+              key === 'adviceFromQuran' ? 'w-full' : 'w-40'
+            }   h-36 mb-4 rounded-2xl p-2`}
+            onPress={() => goToAnotherScreen(key)}
           >
             <Text
-              style={tw`mt-auto text-center font-semibold ${
-                key === 'adviceFromQuran'
-                  ? 'text-white text-lg'
-                  : 'text-gray-800'
+              style={tw`mt-auto text-quran-primary text-center font-bold ${
+                key === 'adviceFromQuran' ? ' text-xl' : 'text-lg'
               }`}
             >
               {title}
             </Text>
-          </View>
+          </Pressable>
         ))}
       </View>
     </View>

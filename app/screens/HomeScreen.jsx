@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Text, Pressable, View, SafeAreaView, ScrollView } from 'react-native';
-import tw from 'twrnc';
+import tw from '../lib/tailwind';
 import Category from '../components/Category';
 
 const DAILY_DUAS = [{ name: 'Daily dose of remembrance', key: 'Daily Duas' }];
@@ -41,26 +41,26 @@ const DUA_OPTIONS = [
   {
     name: 'Emotion based Verses',
     key: 'Emotion Based Verses',
-    color: 'bg-red-200',
-    text: 'text-gray-900',
+    color: 'bg-card-primary',
+    text: 'text-quran-primary',
   },
   {
     name: 'Daily Verses',
     key: 'Daily Verses',
-    color: 'bg-pink-400',
-    text: 'text-white',
+    color: 'bg-card-secondary',
+    text: 'text-quran-white',
   },
   {
     name: 'Random Verses',
     key: 'Random Verses',
-    color: 'bg-blue-400',
-    text: 'text-white',
+    color: 'bg-card-tertiary',
+    text: 'text-quran-primary',
   },
   {
     name: 'Tasbeeh',
     key: 'Tasbeeh',
-    color: 'bg-purple-300',
-    text: 'text-white',
+    color: 'bg-card-fourth',
+    text: 'text-quran-primary',
   },
 ];
 
@@ -72,6 +72,24 @@ const HomeScreen = ({ navigation }) => {
 
     if (key === 'Daily Verses') {
       navigation.navigate('Daily Verses');
+    }
+
+    if (key === 'graveSins') {
+      navigation.navigate('graveSins');
+    }
+
+    if (key === 'shaytanTricks') {
+      navigation.navigate('shaytanTricks');
+    }
+
+    if (key === 'adviceFromQuran') {
+      navigation.navigate('adviceFromQuran');
+    }
+    if (key === 'Random Verses') {
+      navigation.navigate('Random Verses');
+    }
+    if (key === 'Tasbeeh') {
+      navigation.navigate('Tasbeeh');
     }
   };
 
@@ -102,15 +120,15 @@ const HomeScreen = ({ navigation }) => {
 
         <View style={tw`mt-10`}>
           {DAILY_DUAS.map(({ name, key }) => (
-            <View key={key} style={tw`bg-gray-100 rounded-3xl p-4`}>
-              <Text style={tw`text-base font-bold`}>{name}</Text>
+            <View key={key} style={tw`bg-quran-primary rounded-3xl p-4`}>
+              <Text style={tw`text-quran-white text-lg font-bold`}>{name}</Text>
               {DAILY_DUAS_VERSES.slice(0, 1).map(
                 ({ id, english, reference }) => (
                   <View key={id}>
-                    <Text style={tw`my-2 text-gray-600 text-base italic`}>
+                    <Text style={tw`my-2 text-quran-white text-base italic`}>
                       {english}
                     </Text>
-                    <Text style={tw`text-pink-400 text-sm font-bold`}>
+                    <Text style={tw`text-quran-secondary text-sm font-bold`}>
                       {reference}
                     </Text>
                   </View>
@@ -119,7 +137,7 @@ const HomeScreen = ({ navigation }) => {
             </View>
           ))}
         </View>
-        <Category />
+        <Category goToAnotherScreen={goToAnotherScreen} />
       </ScrollView>
     </SafeAreaView>
   );

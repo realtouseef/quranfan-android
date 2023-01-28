@@ -25,3 +25,15 @@ For now, it has 2 screens: the Emotion based Verses and Daily Verses
 - create a drawer?
 
 - create a logo, take screenshots of the screens, and upload it to playstore
+
+## color scheme
+
+primary -- #00565E
+secondary -- #63E7AB
+tertiary -- #D4EAFF
+fourth -- #ffffff
+
+1 card -- #FFC9C4
+2 card -- #053F71
+3 card -- #CCE6FF
+4 card -- #FFF2C0

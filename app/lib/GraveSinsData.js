@@ -1,9 +1,8 @@
-export const GraveSins = [
+export const GraveSinsData = [
   {
     id: 1,
     title: 'Shirk',
-    description: `Worshiping others or associating partners
-    with Allah (shirk)`,
+    description: `Worshiping others or associating partners with Allah (shirk)`,
   },
   {
     id: 2,
@@ -18,8 +17,7 @@ export const GraveSins = [
   {
     id: 4,
     title: 'Astrology',
-    description: `Believing in superstition, fortune telling and
-    astrology`,
+    description: `Believing in superstition, fortune telling and astrology`,
   },
   {
     id: 5,
